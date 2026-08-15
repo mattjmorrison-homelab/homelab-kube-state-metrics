@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kube-state-metrics-verify-script
+  namespace: monitoring
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+data:
+{{- (.Files.Glob "scripts/*").AsConfig | nindent 2 }}
