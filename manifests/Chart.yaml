@@ -1,0 +1,5 @@
+apiVersion: v2
+name: homelab-kube-state-metrics
+description: Kubernetes object state metrics exporter
+version: 0.1.0
+appVersion: "v2.13.0"
